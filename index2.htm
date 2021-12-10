@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paola Símbolos</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="lola3.ico">
+</head>
+
+<body>
+	<style>
+		* { margin: 0; padding: 0; }
+		#deolane {height: 200px; margin-bottom: 20px; background-image: url("deolane.png")}
+		#simbolos {height: 250px;}
+		#titulo {font-size: 90px; font-family: Comic Sans MS; text-align: center;}
+		#real {font-size: 25px; text-align: center; font-family: Arial; margin-top: 20px;}
+		#adelia {height: 200px; margin-top: 20px;  background-image: url("adelia.png")}
+        .card { display: inline-flex; width: 100px; height: 100px; background-color: aliceblue; margin: 15px; align-items: center; justify-content: center; font-size: 35px;}
+        #center {width: 100%; justify-content: center; display: flex;}
+        input { display: none;}
+	</style>
+
+	<div id="deolane">
+	</div>
+
+	<div id="simbolos">
+		<p id="titulo"><n>✨ Símbolos para Paola ✨</n></p>
+        <div id='center'>
+            <div class='card' onclick="copy('1')" >º</div>
+            <input type="text" id='1' name="1" value="º">
+            <div class='card' onclick="copy('2')" >ª</div>
+            <input type="text" id='2' name="2" value="ª">
+            <div class='card' onclick="copy('3')" >|</div>
+            <input type="text" id='3' name="3" value="|">
+            <div class='card' onclick="copy('4')" >¬</div>
+            <input type="text" id='4' name="4" value="¬">
+            <div class='card' onclick="copy('5')" >¨</div>
+            <input type="text" id='5' name="5" value="¨">
+            <div class='card' onclick="copy('6')" >§</div>
+            <input type="text" id='6' name="6" value="§">
+            <div class='card' onclick="copy('7')" >⚖</div>
+            <input type="text" id='7' name="7" value="⚖">
+        </div>
+	</div>
+
+	<div id="adelia">
+	</div>
+
+
+    <script>
+        
+        async function copy(id) {
+            let text = document.getElementById(id).value;
+            await navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+
+<footer>
+</footer>
+
+</html>
